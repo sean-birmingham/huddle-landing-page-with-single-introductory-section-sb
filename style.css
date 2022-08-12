@@ -18,6 +18,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 62.5%;
   color: var(--white);
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -69,11 +71,12 @@ footer .fa-instagram {
 }
 
 .container {
-  background: url(images/bg-desktop.svg);
-  background-position: top center;
+  background: url('images/bg-mobile.svg');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 0 3rem;
+  height: 100vh;
 }
 
 .content {
@@ -110,4 +113,120 @@ footer .fa-instagram {
 .content .text-container p {
   margin-top: 1.5rem;
   width: 304px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    line-height: 6rem;
+    font-size: 4rem;
+    width: 505px;
+  }
+
+  .container {
+    background-image: url('images/bg-desktop.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 8rem;
+  }
+
+  .content .img-container img {
+    height: 346px;
+    width: 448px;
+  }
+
+  .content .text-container {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    line-height: 6rem;
+    font-size: 4.5rem;
+    margin-top: 4rem;
+  }
+
+  button {
+    height: 60px;
+    border-radius: 3rem;
+  }
+
+  button:hover {
+    background-color: var(--softmagenta);
+    color: var(--white);
+  }
+
+  footer {
+    justify-content: flex-end;
+    margin-top: 4rem;
+    padding-right: 8rem;
+  }
+
+  .container {
+    background-image: url('/images/bg-desktop.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 59px;
+  }
+
+  .content .img-container {
+    margin: 0;
+  }
+
+  .content .img-container img {
+    height: 493px;
+    width: 696px;
+  }
+
+  .content .text-container {
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+  }
+
+  .content .text-container h1,
+  .content .text-container p {
+    text-align: left;
+  }
+
+  .content .text-container p {
+    width: 526px;
+    font-size: 1.7rem;
+  }
+
+  footer {
+    margin-bottom: 4rem;
+  }
+
+  footer .fa-facebook,
+  footer .fa-twitter,
+  footer .fa-instagram {
+    font-size: 1.5rem;
+    align-items: flex-end;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 9px;
+    cursor: pointer;
+  }
+
+  footer i:hover {
+    color: var(--softmagenta);
+    border-color: var(--softmagenta);
+  }
 }
