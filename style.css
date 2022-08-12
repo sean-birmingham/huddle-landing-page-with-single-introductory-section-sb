@@ -9,12 +9,105 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  background: var(--violet) url(images/bg-desktop.svg) no-repeat center center fixed;
-  background-size: contain;
-  font-family: 'Open Sans', sans-serif;
+  background-color: var(--violet);
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
   color: var(--white);
+}
+
+header {
+  padding-top: 3rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+button {
+  border: none;
+  border-radius: 5rem;
+  color: var(--violet);
+  width: 200px;
+  height: 40px;
+  font-size: 1.8rem;
+  margin-top: 4rem;
+  box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+footer .fa-facebook,
+footer .fa-twitter,
+footer .fa-instagram {
+  font-size: 1.5rem;
+  align-items: flex-end;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  width: 32px;
+  margin: 0 9px;
+  cursor: pointer;
+}
+
+.container {
+  background: url(images/bg-desktop.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .img-container,
+.content .text-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.content .img-container {
+  margin-top: 6.6rem;
+}
+
+.content .img-container img {
+  height: 209px;
+  width: 296px;
+}
+
+.content .text-container {
+  margin-top: 2rem;
+}
+
+.content .text-container h1,
+.content .text-container p {
+  text-align: center;
+}
+
+.content .text-container p {
+  margin-top: 1.5rem;
+  width: 304px;
 }
